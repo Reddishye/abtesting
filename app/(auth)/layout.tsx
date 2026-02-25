@@ -4,8 +4,9 @@ import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import dynamic from 'next/dynamic'
 
-const Grainient  = dynamic(() => import('@/components/Grainient'),  { ssr: false })
-const GlitchText = dynamic(() => import('@/components/GlitchText'), { ssr: false })
+import GlitchText from '@/components/GlitchText'
+
+const Grainient = dynamic(() => import('@/components/Grainient'), { ssr: false })
 
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
@@ -79,6 +80,19 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
                 The outer items-center centers the block in the panel.
               */}
               <div className="flex flex-col items-start">
+                {/* "World moves fast." — small caption above the big slogan */}
+                <span
+                  className="text-white/45 font-light tracking-widest leading-none mb-3"
+                  style={{
+                    fontSize: 'clamp(0.6rem, 0.9vw, 0.75rem)',
+                    marginLeft: 'clamp(0.5rem, 0.5vw, 1rem)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.2em',
+                  }}
+                >
+                  World moves fast.
+                </span>
+
                 {/* "Move" — thin editorial italic serif */}
                 <span
                   className="text-white leading-[0.85]"
