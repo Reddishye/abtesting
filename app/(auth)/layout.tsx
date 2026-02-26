@@ -82,7 +82,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
               <div className="flex flex-col items-start">
                 {/* "World moves fast." — small caption above the big slogan */}
                 <span
-                  className="text-white/45 font-light tracking-widest leading-none mb-3"
+                  className="text-white font-medium tracking-widest leading-none mb-3"
                   style={{
                     fontSize: 'clamp(0.6rem, 0.9vw, 0.75rem)',
                     marginLeft: 'clamp(0.5rem, 0.5vw, 1rem)',
